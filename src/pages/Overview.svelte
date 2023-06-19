@@ -14,6 +14,7 @@
   } from "../lib/dates.js";
   import { formatNumberWithCommas } from "../lib/formatters";
   import { mapCategoryToEmoji } from "../lib/mappers.js";
+  import Chart from "../components/Chart.svelte";
 
   const dispatch = createEventDispatcher();
 
@@ -97,6 +98,7 @@
       <ArrowRectRight />
     </StatCard>
   </div>
+  <Chart {transactions} />
   <div class="transaction-container">
     <table class="transactions">
       <thead>

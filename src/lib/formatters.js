@@ -18,3 +18,8 @@ export function prettifyDate(date) {
 export function toISO8601Date(date) {
   return new Date(date).toISOString().split("T")[0];
 }
+
+export function formatMonth(date) {
+  const options = { month: 'long' };
+  return new Intl.DateTimeFormat('en-UK', options).format(date);
+}
